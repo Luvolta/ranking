@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 100vw;
+    height: 10vh;
+}
+
+header h1 {
+    font-size: 1rem;
+    color: #fb9106;
+    text-shadow: 0 0 2px black;
+    margin: 1rem;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin: 1rem;
+    border-radius: 100%;
+    border: #191919 2px solid;
+}
+
+header div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 3rem;
+    height: 2.5rem;
+}
+
+header div span {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+
+main {
+    width: 100vw;
+    height: max-content;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+
+
+.point {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: .5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.point p{
+    font-size: 1rem;
+    color: #333;
+
+}
+
+.point b {
+    color: #ffa929;
+    font-size: 1rem;
+}
+
+
+
+.region{
+    position: absolute;
+    bottom: .5rem;
+    right: 0.5rem;
+    font-size: .5rem;
+    transition: .5s ease-in-out;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    width: 15.5rem;
+    height: 6rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    padding: 1rem;
+    transition: .5s ease-in-out;
+    position: relative;
+}
+.card span{
+    font-size: 2rem;
+    color: #333333;
+    font-weight: bold;
+}
+.card img {
+    width: 4rem;
+    height: 8.5rem;
+    position: relative;
+    bottom: 3rem;
+    transition: .5s ease-in-out;
+}
+.card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+.card div h3 {
+    font-size: .6rem;
+    color: #333333;
+}
+.card div p {
+    font-size: .6rem;
+    color: #fb9106;
+    
+}
+.card:hover{
+    background-color: #fb9106;
+    width: 15.5rem;
+    height: 8rem;
+}
+.card:hover img {
+    width: 6rem;
+    height: 11rem;
+    position: relative;
+    bottom: 3.6rem;
+}
+.card:hover span{
+    color: white;
+}
+.card:hover div p{
+    color: white;
+}
+.card:hover div h3{
+    color: white;
+} 
+.card:hover .region{
+    position: absolute;
+    bottom: .5rem;
+    right: 0.5rem;
+    font-size: .8rem;
+    color: white;
+}
+.destock{
+    display: none;
+}
+
+
+
+@media screen and (min-width: 280px) and (max-width: 425px) {
+    .card {
+        width: 90%;
+        height: 6rem;
+    }
+    .card div h3 {
+        font-size: .6rem;
+        color: #333;
+    }
+    .card div p {
+        font-size: .6rem;
+        color: #fb9106;
+    }
+    .card:hover{
+        background-color: #fb9106;
+        height: 8rem;
+        width: 90%;
+    }
+  }
+
+
+  @media screen and (min-width: 426px ) and (max-width: 768px) {
+    main {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+    }
+    header h1{
+        font-size: 1.5rem ;
+    }
+   
+
+    .destock {
+        display: flex;
+    }
+    .card {
+        
+        width: 20rem;
+        height: 8rem;
+    }
+
+    .card:hover{
+        background-color: #fb9106;
+        width: 23.5rem;
+        height: 8.5rem;
+    }
+    
+
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 2560px) {
+    main {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: start;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    header h1{
+        font-size: 2rem ;
+    }
+    .destock {
+        display: flex;
+    }
+  }
